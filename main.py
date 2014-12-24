@@ -7,13 +7,15 @@ def start():
 
     songs = parser.get_list_of_songs_from_year(year)
 
-    #print(songs[1])
-
     dl = Downloader()
-    dl.get_song(songs[1])
+    
+    #print(songs[0])
+    
+    for s in songs: 
+        print("Downloading: " + str(s))
+        dl.get_song(s)
+    
+    #dl.get_song(songs[1])
 
 if  __name__ == "__main__":
     start()
-
-def searchMP3Clan():
-    pass    

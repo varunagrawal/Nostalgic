@@ -32,7 +32,7 @@ class NostalgiaMachineParser():
 
         for x in vids:
             values = x.div.h3.contents
-            s = Song(values[0], values[1].span.get_text())
+            s = Song(values[0], values[1].span.get_text(), x.a['href'])
 
             songs = songs + [s]
         
